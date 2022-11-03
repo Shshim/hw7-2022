@@ -10,8 +10,6 @@ window.addEventListener("load", function() {
 	console.log(video.autoplay)
 	console.log(video.loop)
 
-	// DOUBLE CHECK
-	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + "%"
 });
 
 document.querySelector("#play").addEventListener("click", function() {
@@ -51,15 +49,14 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 document.querySelector("#mute").addEventListener("click", function() {
 	console.log("clicked")
-	if (!muted) {
-		video.volume = 0;
+	if (!video.muted) {
+		video.muted = true;
 		this.innerHTML = "Unmute"
 	} else {
-		video.volume = document.querySelector("#slider").value / 100;
+		video.muted = false;
 		this.innerHTML = "Mute"
 	}
 	console.log(video.volume)
-	muted = !muted;
 })
 
 document.querySelector("#slider").addEventListener("change", function() {
