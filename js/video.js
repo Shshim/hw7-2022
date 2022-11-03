@@ -20,7 +20,6 @@ document.querySelector("#play").addEventListener("click", function() {
 
 	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + "%"
 
-
 	// DOUBLE CHECK
 	video.loop = true;
 	// video.autoplay = true;
@@ -63,7 +62,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 document.querySelector("#slider").addEventListener("input", function() {
 	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + "%"
-	video.volume = document.querySelector("#slider").value
+	video.volume = document.querySelector("#slider").value / 100
 })
 
 document.querySelector("#vintage").addEventListener("click", function() {
