@@ -19,10 +19,6 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log(video.volume)
 
 	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + "%"
-
-	// DOUBLE CHECK
-	video.loop = true;
-	// video.autoplay = true;
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
